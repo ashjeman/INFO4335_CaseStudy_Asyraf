@@ -1,12 +1,12 @@
 import 'Calculate.dart';
-//import 'ProductList.dart';
+import 'ProductList.dart';
+import 'order.dart';
 import 'dart:io';
-void main(){
-  int? order;
-  int? unit;
-  bool? repeat;
 
-   Map<int, String> itemName = {
+import 'order.dart';
+void main(){
+/*
+  Map<int, String> itemName = {
     100: 'Mouse',
     101: 'USB Drive',
     102: 'Phone Casing',
@@ -23,21 +23,8 @@ void main(){
     104: 130.50,
     105: 35.90
   };
-  while (true) {
-    print('The Menu:');
-    print('1. Show List of Item');
-    print('2. Exit');
+*/
 
-  stdout.write("Enter the input menu: ");
-  int input = int.parse(stdin.readLineSync()!);
-
-  if (input == 1) {
-      stdout.write(itemName);
-      stdout.write(itemPrice);
-    } else if (input == 2) {
-      print('Thanks for chosen us.');
-      break;
-      }
-  }
+  ProductList.display();
 }
 
