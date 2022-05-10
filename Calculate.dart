@@ -3,8 +3,10 @@ import 'ProductList.dart';
 
 class Calculate{
   
-  //properies
+  //properties
   DateTime? date;
+
+  double? total;
 
   //constructor
   Calculate(){
@@ -22,10 +24,13 @@ class Calculate{
   }
 
   void calc(){
-    double? total;
-    double gst = 0.06;
+    double? gst;
     total = ProductList.totalPrice;
 
+    total = (0.06 * total!) + total!;
+
+    print("Your total is: RM $total");
+    print("$date");
 
   }
   

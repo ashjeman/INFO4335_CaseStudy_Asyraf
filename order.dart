@@ -4,8 +4,9 @@ import 'dart:io';
 
 
 double order(double totalPrice){
-  int? code;
-  int? unit;
+  String? code;
+  int? quantity;
+  
 
 //cana nak print map repeatedly
 //matchkan key dgn name & price
@@ -13,27 +14,31 @@ double order(double totalPrice){
   //display products
   print("Input the item code");
   //ProductList.itemName.forEach((code, name) => print("\n $code : $name - RM "));
-  code = stdin.readLineSync() as int;
+  code = stdin.readLineSync();
 
   print("Quantity: ");
-  unit = stdin.readLineSync() as int;
+  String? unit = stdin.readLineSync();
+  if(unit != null){
+    quantity = int.parse(unit);
+  }
 
-  switch (code) {
-    case 100: totalPrice += 29.99;
+  switch (code as String) {
+    case '100': totalPrice += 29.99;
       break;
-    case 101: totalPrice += 18.90;
+    case '101': totalPrice += 18.90;
       break;
-    case 102: totalPrice += 10.00;
+    case '102': totalPrice += 10.00;
       break;
-    case 103: totalPrice += 58.90;
+    case '103': totalPrice += 58.90;
       break;
-    case 104: totalPrice += 13.50;
+    case '104': totalPrice += 13.50;
       break;
-    case 105: totalPrice += 35.90;
+    case '105': totalPrice += 35.90;
       break;
   }
 
-  totalPrice = totalPrice * unit;
+  totalPrice = totalPrice * quantity!;
+  print(totalPrice);
 
   return totalPrice;
 

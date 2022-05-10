@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'Calculate.dart';
 import 'order.dart';
 
 class ProductList{
@@ -48,9 +49,7 @@ class ProductList{
     },
   };
   
-
-
-  static var totalPrice;
+  static double? totalPrice;
 
   ProductList(){
     itemName = '' as Map<int, String>;
@@ -92,7 +91,8 @@ class ProductList{
         totalPrice = order(totalPrice);
 
       } else if (input == 2) {
-        print('Thanks for chosen us.');
+        Calculate().calc();
+        print('Thank you for choosing us.');
         break;
         }
     }
