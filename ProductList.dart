@@ -21,6 +21,35 @@ class ProductList{
     105: 35.90
   };
 
+  static Map<int, Map<String, Object>> item = {
+    100: {
+      'name': 'Mouse',
+      'price': 29.99,
+    },
+    101: {
+      'name': 'USB Drive',
+      'price': 18.90,
+    },
+    102: {
+      'name': 'Phone Casing',
+      'price': 10.00,
+    },
+    103: {
+      'name': 'Webcam',
+      'price': 58.90,
+    },
+    104: {
+      'name': 'Keyboard',
+      'price': 130.50,
+    },
+    105: {
+      'name': 'Bluetooth Speaker',
+      'price': 35.90,
+    },
+  };
+  
+
+
   static var totalPrice;
 
   ProductList(){
@@ -29,13 +58,13 @@ class ProductList{
   }
 
   //setter
-   void setItemName(String name){
-    this.itemName = name as Map<int, String>;
-  }
+  //  void setItemName(String name){
+  //   this.itemName = name as Map<int, String>;
+  // }
 
-  void setItemPrice(double price){
-    this.itemPrice = price as Map<int, double>;
-  }
+  // void setItemPrice(double price){
+  //   this.itemPrice = price as Map<int, double>;
+  // }
 
   //getter
     Map<int, String> getItemName(){
@@ -59,8 +88,7 @@ class ProductList{
     int input = int.parse(stdin.readLineSync()!);
 
     if (input == 1) {
-        stdout.write("Items: $itemName \n");
-        stdout.write("Price: $itemPrice \n");
+        stdout.write("Items: $item \n");
         totalPrice = order(totalPrice);
 
       } else if (input == 2) {
