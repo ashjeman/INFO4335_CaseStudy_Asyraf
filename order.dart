@@ -6,10 +6,6 @@ import 'dart:io';
 double order(double totalPrice){
   String? code;
   int? quantity;
-  
-
-//cana nak print map repeatedly
-//matchkan key dgn name & price
 
   //display products
   print("Input the item code");
@@ -38,7 +34,7 @@ double order(double totalPrice){
   }
 
   totalPrice = totalPrice * quantity!;
-  print(totalPrice);
+  //print(totalPrice);
 
   return totalPrice;
 

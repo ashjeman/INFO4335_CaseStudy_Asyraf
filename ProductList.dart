@@ -13,14 +13,14 @@ class ProductList{
     105: 'Bluetooth Speaker'
   };
 
-  static Map<int, double> itemPrice = {
+  /*static Map<int, double> itemPrice = {
     100: 29.99,
     101: 18.90,
     102: 10.00,
     103: 58.90,
     104: 130.50,
     105: 35.90
-  };
+  };*/
 
   static Map<int, Map<String, Object>> item = {
     100: {
@@ -49,11 +49,15 @@ class ProductList{
     },
   };
   
-  static double? totalPrice;
+  double? totalPrice;
+
+  double? getTotalPrice(){
+    return totalPrice;
+  }
 
   ProductList(){
     itemName = '' as Map<int, String>;
-    itemPrice = 0 as Map<int, double>;
+    //itemPrice = 0 as Map<int, double>;
   }
 
   //setter
@@ -70,13 +74,13 @@ class ProductList{
     return itemName;
   }
 
-  Map<int, double> getItemPrice(){
+  /*Map<int, double> getItemPrice(){
     return itemPrice;
-  }
+  }*/
 
   static void display(){
 
-    double totalPrice = 0;
+    double sumPrice = 0;
 
     while (true) {
       print('The Menu:');
@@ -88,10 +92,12 @@ class ProductList{
 
     if (input == 1) {
         stdout.write("Items: $item \n");
-        totalPrice = order(totalPrice);
+        sumPrice = order(sumPrice);
+        print("Total is : RM$sumPrice");
 
       } else if (input == 2) {
-        Calculate().calc();
+        //Calculate().calc();
+        print((0.06 * sumPrice) + sumPrice);
         print('Thank you for choosing us.');
         break;
         }
