@@ -6,18 +6,15 @@ ii. Group Members
 2. Abdul Muhaimin Bin Zulkifli (1811119)
 
 iii. Assigned Tasks
-1. Asyraf - 
-2. Muhaimin - 
+1. Asyraf - order.dart and Date.dart
+- Perform calculations of sum for the products and quantities selected by user.
+- Calculate any discount available.
+- Calculate the total price including GST
+2. Muhaimin - ProductList.dart
 
 iv. Case Study Description
-
-
-machine akan run Main.dart dulu.
-dalam main.dart dia akan run function ProductList.display().
-
-Dalam file ProductList ada semua maklumat pasal semua products, dan dia akan display sekali. constructor, setter, getter pun dah settle. (tapi display ni aku taktau cana nak bagi dia show Code - Name - Price. kalau hg reti settlekan jap ehe).
-pastu file productlist ni akan run function order() dari file order.dart.
-
-dalam file order.dart ni, dia akan kira price*unit. aku taktau mcmana nak bagi kita boleh add lagi barang.
-
-dah settle tu semua, run function calc() dari file Calculate.dart. kira semua termasuk gst sekali
+1. It contains unlimited slots for storage. //Muhaimin
+2. Each row will store number of items, product description, product price, product quantity, and product total. //Muhaimin
+3. The total or final amount should be displayed at the end of the last product. //Asyraf
+4. Any discount item will also reflect to the product total. //Asyraf
+5. The payable amount is subjected to 6% of GST. //Asyraf

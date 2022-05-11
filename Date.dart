@@ -1,7 +1,5 @@
-import 'order.dart';
-import 'ProductList.dart';
-
-class Calculate{
+//Asyraf
+class Date{
   
   //properties
   DateTime? date;
@@ -9,7 +7,7 @@ class Calculate{
   double? total;
 
   //constructor
-  Calculate(){
+  Date(){
     date = DateTime.now();
   }
 

@@ -1,17 +1,17 @@
 import 'dart:io';
-import 'Calculate.dart';
+import 'Date.dart';
 import 'order.dart';
 
 class ProductList{
 
-  static Map<int, String> itemName = {
+  /*static Map<int, String> itemName = {
     100: 'Mouse',
     101: 'USB Drive',
     102: 'Phone Casing',
     103: 'Webcam',
     104: 'Keyboard',
     105: 'Bluetooth Speaker'
-  };
+  };*/
 
   /*static Map<int, double> itemPrice = {
     100: 29.99,
@@ -22,6 +22,7 @@ class ProductList{
     105: 35.90
   };*/
 
+  //Muhaimin
   static Map<int, Map<String, Object>> item = {
     100: {
       'name': 'Mouse',
@@ -56,7 +57,7 @@ class ProductList{
   }
 
   ProductList(){
-    itemName = '' as Map<int, String>;
+    //itemName = '' as Map<int, String>;
     //itemPrice = 0 as Map<int, double>;
   }
 
@@ -69,10 +70,10 @@ class ProductList{
   //   this.itemPrice = price as Map<int, double>;
   // }
 
-  //getter
+  /*getter
     Map<int, String> getItemName(){
     return itemName;
-  }
+  }*/
 
   /*Map<int, double> getItemPrice(){
     return itemPrice;
@@ -97,7 +98,10 @@ class ProductList{
 
       } else if (input == 2) {
         //Calculate().calc();
-        print((0.06 * sumPrice) + sumPrice);
+        double total = (0.06 * sumPrice) + sumPrice;
+        String roundedTotal = total.toStringAsFixed(2);
+        DateTime? date = Date().date;
+        print("Your sum is: RM $roundedTotal. $date");
         print('Thank you for choosing us.');
         break;
         }
