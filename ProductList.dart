@@ -99,10 +99,12 @@ class ProductList{
 
       } else if (input == 2) {
         //Calculate().calc();
-        double total = (0.06 * sumPrice) + sumPrice;
+        double discount = sumPrice - (0.1 * sumPrice); //Discount 10%. Asyraf
+        double total = (0.06 * sumPrice) + sumPrice; 
         String roundedTotal = total.toStringAsFixed(2);
         DateTime? date = Date().date;
-        print("Your sum is: RM $roundedTotal. $date");
+        print('10% discount included!');
+        print("Your sum is: RM $roundedTotal. Receipt on: $date");
         print('Thank you for choosing us.');
         break;
         }
