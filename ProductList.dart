@@ -92,7 +92,8 @@ class ProductList{
     int input = int.parse(stdin.readLineSync()!);
 
     if (input == 1) {
-        stdout.write("Items: $item \n");
+        stdout.write("Items: \n");
+        item.forEach((k,v) => print('${k}: ${v}'));
         sumPrice = order(sumPrice);
         print("Total is : RM$sumPrice");
 
